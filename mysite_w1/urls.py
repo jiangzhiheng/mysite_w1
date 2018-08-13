@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import re_path
 from django.urls import path
-# from app01 import views
+from app01 import views
 # from manager import views
 
 from django.urls import include
@@ -28,4 +28,5 @@ urlpatterns = [
     # re_path('login/(\d+)/', views.login),
     # re_path('login2/(?P<p1>\d+)/(?P<x1>\d+)/', views.login2),
     path('web/',include('app01.urls')),
+    path('template',views.template)
 ]

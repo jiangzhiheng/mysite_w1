@@ -19,9 +19,6 @@ from django.urls import path
 from app01 import views
 
 
-
-
-
 urlpatterns = [
 
     re_path('index/(\d+)/', views.index),

@@ -66,3 +66,29 @@
 
 路由系统详解：
 
+2.模板
+    a.模板渲染的过程
+    b.{{ k1 }}
+    c.for循环
+    d.内置方法
+    e.自定义方法
+        filter
+        simple_tag
+
+        1.创建指定文件夹，名称不能改templatetags
+        2.创建任意xx.py
+        from django import template
+        from django.utils.safestring import mark_safe
+        #register名称不能变
+        register = template.Library()
+        创建函数
+
+        3.在html模板的头部执行
+        {% load xx %}
+
+        4.{{ k1|f1 }}
+        5.在settings注册app
+
+
+
+

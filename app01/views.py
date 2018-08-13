@@ -29,3 +29,10 @@ def detail(request,nid):
     nid = int(nid)
     current_detail = USER_LIST[nid]     #current_detail列表中的一个元素，数据类型为字典
     return render(request,'detail.html',{'current_detail':current_detail})
+
+
+def template(request):
+    return render(request,
+                  'template.html',
+                  {'k1':'v1','k2':[11,22,33,44,]}
+                  )
