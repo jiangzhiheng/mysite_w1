@@ -73,7 +73,10 @@
     d.内置方法
     e.自定义方法
         filter
+            限制：传参数的个数
+            支持模板语言的if条件
         simple_tag
+            不支持作为if条件
 
         1.创建指定文件夹，名称不能改templatetags
         2.创建任意xx.py
@@ -88,7 +91,10 @@
 
         4.{{ k1|f1 }}
         5.在settings注册app
-
+    f. 模板的继承（母板）-----子板
+    {% block body %}
+    {% endblock%}
+    g. {% include 'xxx.html'%}，html中小组件的重复利用
 
 
 
