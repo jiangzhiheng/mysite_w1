@@ -96,5 +96,8 @@
     {% endblock%}
     g. {% include 'xxx.html'%}，html中小组件的重复利用
 
+Ajax
+
+
 
 

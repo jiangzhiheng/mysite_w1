@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import re_path
 from django.urls import path
 from app01 import views
+from django.conf.urls import url,include
 
 
 urlpatterns = [
 
     re_path('index/(\d+)/', views.index),
     re_path('detail/(\d+)/', views.detail),
+    path('ajax_demo/',views.ajax_demo),
 ]
