@@ -37,12 +37,19 @@ def template(request):
                   {'k1':'v1','k2':[11,22,33,44,]}
                   )
 
+
+import json
 def ajax_demo(request):
     if request.method == 'POST':
+        ret = {'status':False,'message':''}
         user = request.POST.get('user',None)
         pwd = request.POST.get('pwd',None)
         if user == '111' and pwd == '222':
-            return HttpResponse('1')
+            ret['status'] = True
+            return HttpResponse(json.dumps(ret))
+            #return HttpResponse('1')
         else:
-            return HttpResponse('2')
+            ret['message'] = '用户名或密码错误'
+            return HttpResponse(json.dumps(ret))
+            #return HttpResponse('2')
     return render(request,'ajax_demo.html')

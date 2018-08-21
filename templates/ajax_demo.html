@@ -20,11 +20,14 @@
                 url:'/web/ajax_demo/',
                 type:'POST',
                 data:{'user':$('#username').val(),'pwd':$('#pwd').val()},
+                dataType:'json',
+                {#  data "{'status':False,'message':''}" #}
                 success:function (data) {
-                    if (data == '1'){
+                    {#var data_dict = JSON.parse(data)#}
+                    if (data.status){
                         location.href = 'http://www.baidu.com';
                     }else {
-                        alert('用户名或密码错误')
+                        alert(data.message)
                     }
                 }
             })
