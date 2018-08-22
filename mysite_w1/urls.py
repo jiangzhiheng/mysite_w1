@@ -23,7 +23,7 @@ from django.urls import include
 
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     # path('index/', views.index ),
     # re_path('login/(\d+)/', views.login),
     # re_path('login2/(?P<p1>\d+)/(?P<x1>\d+)/', views.login2),

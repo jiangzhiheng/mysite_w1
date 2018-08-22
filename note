@@ -96,7 +96,31 @@
     {% endblock%}
     g. {% include 'xxx.html'%}，html中小组件的重复利用
 
-Ajax
+3.Ajax
+
+4.Model，ORM
+    1.创建（CURD）数据库表
+
+        a.app models.py中写类
+            from django.db import models
+            class userinfo(models.Model):
+                name = models.CharField(max_length=30)  #string
+                email = models.EmailField() #string 帮admin做输入验证，modelform
+                memo = models.TextField()   #text
+        b.python manage.py mkmigrations
+          python manage.py migrate
+    2.admin.py中注册创建的表
+    3.创建Django后台管理超级用户
+        python manage.py createsuperuser
+
+
+
+
+    2.操作数据库的数据
+
+
+
+
 
 
 
